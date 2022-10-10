@@ -40,5 +40,11 @@ def move(player, board):
     square = int(input(f"{player}'s turn todo a movement (1-9): "))
     board[square - 1] = player
 
+def next_player(current):
+    if current == "" or current == "o":
+        return "x"
+    elif current == "x":
+        return "o"
+
 if __name__ == "__main__":
     main()
